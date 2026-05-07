@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piyush Lohar | Elite Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+            scroll-behavior:smooth}
+        body{
+            background:#020617;
+            color:white}
+
+        header{position:fixed;
+            width:100%;top:0;
+            background: url('https://en.sc.uobaghdad.edu.iq/wp-content/uploads/sites/66/2024/03/Department-of-Computer-Science.jpg');
+            backdrop-filter:blur(12px);
+            padding:15px 40px;
+            display:flex;
+            justify-content:space-between
+            ;align-items:center;
+            z-index:1000
+            
+        }
+        /* BUTTONS */
+        .mainButtons {
+            height: 30%;
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            padding:40px;
+            }
+            
+            .mainButtons button {
+            padding:15px 25px;
+            font-size:18px;
+            border:none;
+            background:linear-gradient(45deg,#007bff,#00c6ff);
+            color:white;
+            border-radius:10px;
+            cursor:pointer;
+            transition:0.3s;
+            }
+            
+            .mainButtons button:hover {transform:scale(1.1);}
+            
+            /* CARDS */
+            .container {
+            display:none;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            padding:20px;
+            }
+            
+            header h2{
+                color:#38bdf8
+            }
+        nav a{
+            margin:0 10px;
+            color:white;
+            text-decoration:none}
+        nav a:hover{
+            color:#38bdf8
+        }
+
+        section{
+            padding:100px 40px;
+            min-height:80vh
+        }
+        .hero{
+            text-align:center;
+            display:flex;flex-direction:column;
+            justify-content:center;
+            align-items:center
+        }
+
+        .hero h1{
+            font-size:3rem
+        }
+        .hero span{
+            color:#38bdf8
+        }
+
+        .btn{
+            margin-top:20px;
+            padding:10px 20px;
+            background:#38bdf8;
+            border:none;
+            border-radius:5px;
+            color:black;
+            cursor:pointer
+        }
+
+        .glass{
+            background:rgba(255,255,255,0.05);
+            backdrop-filter:blur(10px);
+            border-radius:15px;
+            padding:20px}
+
+        .skills .bar{
+            margin:15px 0;
+        }
+        .progress{
+            background:#111;
+            border-radius:20px
+        }
+        .progress div{
+            height:10px;
+            background:#38bdf8
+        }
+
+        .projects{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px
+        }
+        .card{
+            background:rgba(255,255,255,0.05);
+            backdrop-filter:blur(10px);
+            border-radius:10px;
+            overflow:hidden;
+            transition:.3s
+        }
+        .card img{
+            width:100%;
+            height:150px;
+            object-fit:cover
+        }
+        .card:hover{
+            transform:translateY(-10px)
+        }
+        .card .content{
+            padding:15px
+        }
+
+        footer{
+            height: 30%;
+            text-align:center;
+            padding:20px;
+            background:#000}
+
+        .reveal{
+            opacity:0;
+            transform:translateY(40px);
+            transition:1s
+        }
+        .reveal.active{
+            opacity:1;
+            transform:translateY(0)
+        }
+    </style>
+</head>
+
+    <body>
+
+    <header>
+    <h2>Piyush</h2>
+    <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    </nav>
+    </header>
+
+    <section id="home" class="hero">
+    <h1>Hi, I'm <span>Piyush Lohar</span></h1>
+    <p style="color: white;">Future Full Stack Web Developer 🚀</p>
+    <button class="btn" onclick="scrollToSection('projects')">Explore Projects</button>
+    </section>
+
+    <section id="about" class="glass reveal">
+    <h2>About Me</h2>
+    <p>I am a Computer Science student focused on becoming a professional developer. I build modern websites and continuously improve my skills.I am a dedicated Computer Science student with a strong passion for technology, programming, and problem-solving. I am deeply interested in understanding how software systems work and how modern applications are built and optimized.
+
+        Currently, I am focusing on developing my skills in web development and programming. I have knowledge of technologies like HTML, CSS, JavaScript, Python, and Java, and I continuously work on improving my skills by building real-world projects.
+        
+        I enjoy creating responsive and user-friendly websites with modern design principles. I am also interested in areas like networking, software development, and emerging technologies, which help me stay updated with the latest trends in the tech industry.
+        
+        Apart from technical skills, I believe in continuous learning, self-improvement, and practical implementation of knowledge. I am always eager to explore new tools, frameworks, and concepts that can enhance my development journey.
+        
+        My goal is to become a professional software developer and contribute to innovative and impactful projects in the future.</p>
+    </section>
+
+    <section id="skills" class="glass reveal">
+    <h2>Skills</h2>
+    <div class="bar"><span>HTML</span><div class="progress"><div style="width:90%"></div></div></div>
+    <div class="bar"><span>CSS</span><div class="progress"><div style="width:92%"></div></div></div>
+    <div class="bar"><span>Python</span><div class="progress"><div style="width:75%"></div></div></div>
+    <div class="bar"><span>Java</span><div class="progress"><div style="width:85%"></div></div></div>
+    </section>
+
+    <section id="projects" class="projects reveal">
+    <div class="card">
+    <img src="https://images.pexels.com/photos/1766604/pexels-photo-1766604.jpeg?cs=srgb&dl=pexels-judit-peter-281675-1766604.jpg&fm=jpg"/>
+    <div class="content">
+    <h3>Piyush Notes</h3>
+    <p>Notes platform</p><br>
+    <a href="https://piyushtechnotes.blogspot.com/" class="btn">View Code</a>
+    </div>
+    </div>
+
+    <div class="card">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.4C2jV8Ordm7ffUY-tJ7y5AHaEo?pid=Api&P=0&h=180"/>
+    <div class="content">
+    <h3>Portfolio</h3>
+    <p>Personal Blog</p><br>
+    <a href="https://piyushtechnotes.blogspot.com/" class="btn">View Blog</a>
+    </div>
+    </div>
+    </section>
+
+    <section id="contact" class="glass reveal" style="background: url('https://wallpaperaccess.com/full/1385574.jpg')">
+    <h2>Contact</h2><br>
+    <p>Email: piyushlohar2008@gmail.com</p>
+    <p>GitHub: github.com/Piyush Lohar</p>
+    <p>Contact no.: 9665259715</p>
+    <p>College: Sanjay Ghodawat Institute</p>
+    </section>
+
+    <footer>
+        <h2>Computer Department</h2>
+        <p>Free programs platform for students</p>
+        
+        <p>
+        <a href="https://www.linkedin.com/in/piyush-lohar-bb037b37a/" target="_blank" style="color:white;">LinkedIn</a> |
+        <a href="https://github.com/piyushlohar2008-byte" target="_blank" style="color:white;">GitHub</a>
+        </p>
+        
+        <p>© 2026 Piyush</p>
+        </footer>
+
+    <script>
+    function scrollToSection(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+    window.addEventListener('scroll',()=>{
+    document.querySelectorAll('.reveal').forEach(el=>{
+    let top=el.getBoundingClientRect().top;
+    if(top<window.innerHeight-100){el.classList.add('active')}
+    })
+    })
+    </script>
+
+    </body>
+</html>
