@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ग्रामपंचायत | मौजे वडगांव</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Sura:regular,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Tiro+Devanagari+Marathi:regular,italic" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Yatra+One:regular" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Martel:200,300,regular,600,700,800,900" rel="stylesheet" />
+        <style>
+            @media (max-width: 991px) {
+                .navbar-nav {
+                    padding-top: 0.7rem;
+                }
+            }
+            .sticky-top {
+                position: sticky !important;
+                top: 0 !important;
+                z-index: 1020 !important;
+            }
+            .navbar {
+                box-shadow: 1px 1px 10px rgb(211, 211, 211);
+            }
+            .nav-head {
+                font-family: Eczar;
+                font-weight: 600;
+                text-shadow: 1px 1px black;
+            }
+            .nav-link {
+                font-size: 1.2rem;
+                transition: all 0.2s ease;
+                font-weight: bold;
+                color: rgb(117, 117, 117) !important;
+            }
+            .nav-link:hover {
+                color: red !important;
+            }
+            .name {
+                color: red !important;
+            }
+            .navbar-toggler-icon {
+                width: 20px;
+                height: 20px;
+            }
+
+            #return-home {
+                text-decoration: none;
+                color: blue;
+                transition: all 0.2s ease-in-out;
+                font-weight: normal;
+            }
+            #return-home:hover {
+                color: red;
+            }
+
+            .column-curve {
+                border-radius: 5px;
+            }
+            .sub-col-div {
+                font-family: Poppins; 
+                text-align: justify;
+            }
+            .font-st td {
+                font-family: Poppins;
+                padding: 0.8rem;
+            }
+
+            #parent-li {
+                list-style: none; 
+                margin: 0; 
+                padding: 0; 
+                font-family: Poppins;
+            }
+            .column-hover-effect {
+                transition: all 0.4s ease-in-out;
+            }
+            .column-hover-effect:hover {
+                transform: translateY(-15px);
+                cursor: default;
+            }
+
+            .footer {
+                background-color: #3b4654;
+                color: white !important;
+            }
+            .foot-link a {
+                text-decoration: none;
+                font-size: 1.1rem;
+                color: rgb(192, 192, 192);
+                transition: all 0.3s ease-in-out;
+            }
+            .foot-link a:hover {
+                color: red;
+            }
+        </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-2 border-bottom">
+        <div class="container-fluid position-relative">
+            <div class="d-flex flex-column m-auto m-lg-0 ms-lg-1 pt-1">
+                <a class="navbar-brand fs-4 p-0 m-0 name nav-head" href="#">ग्रामपंचायत मौजे वडगांव</a>
+                <a class="navbar-brand fs-6 p-0 m-0 ms-4 ms-sm-3" href="#">ता. हातकणंगले जि. कोल्हापूर</a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0 gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">मुखपृष्ठ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Gram-panchayat.html">ग्रामपंचायतीबद्दल</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#seva">सेवा</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="development.html">विकासकामे</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">योजना</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">नोटीस</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Village.html">गाव</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Gallary.html">गॅलरी</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="School.html">शाळा</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Contact.html">संपर्क</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container-fluid py-4 bg-secondary-subtle ">
+        <div class="container">
+            <div class="second-nav d-flex flex-column flex-md-row justify-content-md-between ">
+            <div class="align-content-center ">
+                <h1 class="fs-3 pt-3" style=" font-family: Yatra One, system-ui;">ग्रामपंचायतीबद्दल</h1>
+            </div>
+            <div class="align-content-center ">
+                <div class="fs-5"><a href="index.html" id="return-home">मुखपृष्ठ</a> / ग्रामपंचायतीबद्दल</div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 bg-light">
+        <h1 class="text-center fs-2 text-primary fw-bold" style=" font-family: Yatra One, system-ui;">ग्रामपंचायत माहिती</h1>
+        <h4 class="fs-6 text-center mb-4" style="font-family: Poppins;">प्राथमिक व लोकसंख्याविषयक माहिती</h4>
+        <div class="container">
+            <div class="row justify-content-center font-st">
+                <div class="col col-11 col-md-10 col-lg-5 m-2 column-curve border border-2 bg-light-subtle">
+                    <h4 class="text-primary fw-bold fs-5 ms-2 pt-3" style=" font-family: Yatra One, system-ui;">प्राथमिक माहिती</h4>
+                    <table class="table table-bordered table-hover mb-4 ">
+                        <tbody>
+                            <tr >
+                            <td class="fw-bold">ग्रामपंचायतीचे नाव</td>
+                            <td>मौजे वडगांव</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">तालुका</td>
+                            <td>हातकणंगले</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">जिल्हा</td>
+                            <td>कोल्हापूर</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">ग्रामपंचायत स्थापना वर्ष</td>
+                            <td>1987</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">एकूण प्रभाग संख्या</td>
+                            <td>-</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">प्रथम सभा दिनांक</td>
+                            <td>-</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">एकूण क्षेत्रफळ (चौ.कि.मी.)</td>
+                            <td>883.00</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                </div>
+                <div class="col col-11 col-md-10 col-lg-5 m-2 column-curve border border-2 bg-light-subtle">
+                    <h4 class="text-primary fw-bold fs-5 ms-2 pt-3" style=" font-family: Yatra One, system-ui;">लोकसंख्या  माहिती</h4>
+                    <table class="table table-bordered table-hover mb-4">
+                        <tbody>
+                            <tr>
+                            <td class="fw-bold">एकूण लोकसंख्या</td>
+                            <td>6197</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">एकूण कुटुंबे</td>
+                            <td>-</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">पुरुष</td>
+                            <td>3144</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">महिला</td>
+                            <td>3053</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">साक्षरता दर (%)</td>
+                            <td>-</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">पिन कोड</td>
+                            <td>416122</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">LGD कोड</td>
+                            <td>179044</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 border-1 border-top">
+        <h1 class="mb-4 text-center fs-2 text-primary fw-bold" style=" font-family: Yatra One, system-ui;">दृष्टिकोन, ध्येय व मूल्ये</h1>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-11 col-md-10 col-lg-5 m-2 column-hover-effect column-curve border border-2 bg-light-subtle">
+                    <div class="text-primary fw-bold fs-5 my-2" style=" font-family: Yatra One, system-ui;">🎯 दृष्टिकोन व ध्येय</div>
+                    <div class="mb-2 sub-col-div">ग्रामपंचायतचा दृष्टिकोन हा नागरिकाभिमुख, पारदर्शक व शाश्वत विकासावर आधारित आहे. ग्रामविकासाच्या सर्व प्रक्रियांमध्ये नागरिकांचा सक्रिय सहभाग वाढविणे व प्रत्येक घटकापर्यंत मूलभूत सुविधा पोहोचविणे हे आमचे मुख्य ध्येय आहे.</div>
+                    <div class="mb-3 sub-col-div">स्वच्छता, पाणीपुरवठा, आरोग्य, शिक्षण, डिजिटल सेवा व पायाभूत सुविधांच्या विकासामध्ये सातत्यपूर्ण सुधारणा करणे तसेच शासनाच्या विविध योजनांची प्रभावी अंमलबजावणी करणे हे ग्रामपंचायतीचे प्रमुख उद्दिष्ट आहे.</div>
+                </div>
+                <div class="col col-11 col-md-10 col-lg-5 m-2 column-hover-effect column-curve border border-2 bg-light-subtle">
+                    <div class="text-primary fw-bold fs-5 my-2" style=" font-family: Yatra One, system-ui;">🏛️ मूलभूत मूल्ये</div>
+                    <div>
+                        <ul id="parent-li">
+                            <li class="mb-2">✔ पारदर्शक व जबाबदार प्रशासन</li>
+                            <li class="mb-2">✔ नागरिकांचा सहभाग व विश्वास</li>
+                            <li class="mb-2">✔ समतोल व सर्वसमावेशक विकास</li>
+                            <li class="mb-2">✔ स्वच्छता, आरोग्य व पर्यावरण संवर्धन</li>
+                            <li class="mb-2">✔ शासकीय नियम व धोरणांचे काटेकोर पालन</li>
+                            <li class="mb-3">✔ डिजिटल व आधुनिक सेवांचा अवलंब</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 bg-light border-1 border-top">
+        <h1 class="text-center fs-2 text-primary fw-bold" style=" font-family: Yatra One, system-ui;">ग्राम पायाभूत सुविधा</h1>
+        <h3 class="fs-6 text-center mb-4" style="font-family: Poppins;">ग्रामपंचायत अंतर्गत उपलब्ध मूलभूत सुविधा</h3>
+        <div class="container">
+            <div class="row row-12">
+                <div class="col column-curve border border-2 bg-light-subtle">
+                    <table style="font-family: Poppins;" class="table table-bordered table-hover my-4">
+                        <tbody>
+                            <tr>
+                            <td class="fw-bold">1) सार्वजनिक पाणीपुरवठा विहीर संख्या</td>
+                            <td style="width: 28%;">2</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">2) सार्वजनिक बोअरवेल / हातपंप संख्या</td>
+                            <td>-</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">3) पाण्याच्या टाक्यांची संख्या</td>
+                            <td>1</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">4) सार्वजनिक शौचालय संख्या</td>
+                            <td>8</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">5) सार्वजनिक कचराकुड्या संख्या</td>
+                            <td>15</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">6) घनकचरा व्यवस्थापन प्रकल्प संख्या</td>
+                            <td>2</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">7) रस्त्यावरील पथदिवे संख्या</td>
+                            <td>32</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">8) प्राथमिक शाळांची संख्या</td>
+                            <td>1</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">9) माध्यमिक शाळांची संख्या</td>
+                            <td>1</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">10) उच्च माध्यमिक शाळांची संख्या</td>
+                            <td>-</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">11) अंगणवाडी संख्या</td>
+                            <td>2</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">12) सार्वजनिक इमारतींची संख्या</td>
+                            <td>5</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">13) जिल्हा मुख्यालय पासून अंतर (कि.मी.)</td>
+                            <td>17</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">14) तालुका मुख्यालय पासून अंतर (कि.मी.)</td>
+                            <td>10</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">15) गावात बस येते का?</td>
+                            <td>होय</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">16) गावात बँक आहे का?</td>
+                            <td>होय</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">17) प्राथमिक आरोग्य केंद्र / उपकेंद्र उपलब्ध आहे का?</td>
+                            <td>होय</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">18) पर्यटकांसाठी हॉटेल, जेवण व निवास व्यवस्था आहे का?</td>
+                            <td>होय</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">19) वाचनालय आहे का?</td>
+                            <td>नाही</td>
+                            </tr>
+
+                            <tr>
+                            <td class="fw-bold">20) खेळाचे मैदान आहे का?</td>
+                            <td>होय</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 footer">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+            <div class="col text-center text-sm-start text-md-center style="font-family: Poppins; font-size: 0.9rem" align-content-center">
+                <div>
+                    <h1 style="font-size: 2rem; font-family: Eczar;">ग्रामपंचायत मौजे वडगांव</h1>
+                </div>
+                <div class="mb-4 mb-md-0">
+                    <h2 style="font-size: 1.6rem;">ता. हातकणंगले जि. कोल्हापूर</h2>
+                </div>
+            </div>
+            <div class="col foot-link">
+                <div class="fs-4">महत्वाची संकेतस्थळे</div>
+                <div><a href="#">🔗महाराष्ट्र शासन</a></div>
+                <div><a href="#">🔗माझी ग्रामपंचायत</a></div>
+                <div><a href="#">🔗ग्रामविकास विभाग</a></div>
+                <div><a href="#">🔗ई-ग्रामस्वराज</a></div>
+                <div><a href="#">🔗शासन निर्णय</a></div>
+                <div  class="mb-4 mb-md-0"><a href="#">🔗MGNREGA</a></div>
+            </div>
+            <div class="col foot-link">
+                <div class="fs-4">लिंक्स</div>
+                <div><a href="index.html">🔗मुखपृष्ठ</a></div>
+                <div><a href="#">🔗विकासकामे</a></div>
+                <div><a href="#">🔗योजना</a></div>
+                <div><a href="#">🔗माझे गाव</a></div>
+                <div><a href="#">🔗गॅलरी</a></div>
+                <div  class="mb-4 mb-sm-0"><a href="#">🔗संपर्क</a></div>
+            </div>
+            <div class="col">
+                <div class="fs-4">संपर्क</div>
+                <div class="mb-2" style="font-family: Poppins; font-size: 0.9rem">ग्रामपंचायत कार्यालय, मौजे वडगांव, ता. हातकणंगले, जि. कोल्हापूर 416122</div>
+                <div style="font-family: Poppins; font-size: 0.9rem">संपर्क क्र.: 9665259715</div>
+            </div>
+            </div>
+            <hr>
+            <div class="text-center pt-3">
+                <div class="mb-2">
+                    <h5> <span class="text-primary">&copy; Copyright</span> ग्रामपंचायत मौजे वडगांव | All Rights Reserved
+                    </h5>
+                </div>
+                <div><h6>Designed by <span class="text-warning pe-1">Piyush Lohar</span><a href="https://github.com/piyushlohar2008-byte" target="_blank"><i class="text-white fa-brands fa-github"></i></a></h6></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

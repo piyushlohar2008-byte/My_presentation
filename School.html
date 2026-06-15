@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मौजे वडगांव | शाळा</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Sura:regular,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Tiro+Devanagari+Marathi:regular,italic" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Yatra+One:regular" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Martel:200,300,regular,600,700,800,900" rel="stylesheet" />
+        <style>
+            html {
+                padding: 0;
+                margin: 0;
+            }
+            @media (max-width: 991px) {
+                .navbar-nav {
+                    padding-top: 0.7rem;
+                }
+            }
+            .coustom-link {
+                position: relative;
+            }
+            .coustom-link::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 1.8px;
+                background-color: red;
+                left: 50%;
+                top: 44px;
+                transform: translateX(-50%);
+                transition: all 0.4s ease;
+            }
+            .coustom-link:hover::after {
+                width: 100%;
+            }
+            .navbar {
+                box-shadow: 1px 1px 10px rgb(211, 211, 211);
+            }
+            .sticky-top {
+                position: sticky !important;
+                top: 0 !important;
+                z-index: 1020 !important;
+            }
+            .nav-head {
+                font-family: Eczar;
+                font-weight: 600;
+                text-shadow: 1px 1px black;
+            }
+            .nav-link {
+                font-size: 1.2rem;
+                transition: all 0.2s ease;
+                font-weight: bold;
+                color: rgb(117, 117, 117) !important;
+            }
+            .nav-link:hover {
+                color: red !important;
+            }
+            .name {
+                color: red !important;
+            }
+            .navbar-toggler-icon {
+                width: 20px;
+                height: 20px;
+            }
+
+            @media (max-width: 550px) {
+                .school-first-image {
+                    height: 400px;
+                }
+            }
+            @media (max-width: 450px) {
+                .school-first-image {
+                    height: 340px;
+                }
+            }
+            @media (max-width: 350px) {
+                .school-first-image {
+                    height: 280px;
+                }
+            }
+            .school-info {
+                font-family: Poppins;
+                font-weight: bold;
+                color: rgb(0, 0, 216);
+                letter-spacing: 0.5px;
+            }
+            #marathi-school {
+                font-family: Sura; 
+                font-size: 2.2rem; 
+                color: rgb(0, 0, 121); 
+                font-weight: 700;
+            }
+            #village-proud {
+                font-family: Tiro Devanagari Marathi;
+                font-size: 1.2rem;
+                text-align: right;
+            }
+            .school-name {
+                padding-top: 1rem;
+                font-size: 3rem;
+                font-family: Yatra One;
+                letter-spacing: 0.5px;
+                color: red;
+                margin: 0;
+                padding: 0;
+                text-shadow: 2px 2px black;
+            }
+            .village-name {
+                font-size: 3.2rem;
+                font-family: Yatra One;
+                letter-spacing: 1px;
+                color: red;
+                margin: 0;
+                padding: 0;
+                text-shadow: 2px 2px black;
+            }
+            .school-img img {
+                transition: all 0.2s ease-in-out;
+            }
+            .school-img img:hover {
+                border: 3px solid rgb(78, 49, 49) !important;
+            }
+            .info-bg {
+                background-color: rgba(165, 101, 42, 0.842);
+                border-radius: 25px;
+                transition: all 0.3s ease-in-out;
+            }
+            .info-bg:hover {
+                transform: translateY(-20px);
+                cursor: default;
+            }
+            @media (max-width: 590px) {
+                .info-bg {
+                    width: 70% !important;
+                }
+            }
+            @media (max-width: 500px) {
+                .info-bg {
+                    width: 85% !important;
+                }
+            }
+            @media (max-width: 375px) {
+                .info-bg {
+                    width: 90% !important;
+                }
+            }
+
+            .last-foot {
+               padding: 0 1rem 0 3rem;
+               min-height: 150px;
+               border-top-left-radius: 85px;
+               border-bottom-left-radius: 85px;
+               cursor: default;
+               box-shadow: 2px 2px 10px rgb(151, 151, 151);
+               box-sizing: border-box;
+            }
+            .last-para {
+                color: darkblue;
+                font-weight:500 !important;
+                text-shadow: 1px 1px black;
+            }
+            @media (min-width: 768px) and (max-width: 1135px){
+                .round-content {
+                    width: 100% !important;
+                }
+            }
+            @media (max-width: 525px) {
+                .round-content {
+                    width: 80% !important;
+                }
+            }
+            @media (max-width: 457px) {
+                .round-content {
+                    width: 90% !important;
+                }
+            }
+            .foot-contain {
+                padding: 3rem 0;
+            }
+
+            .footer {
+                background-color: #3b4654;
+                color: white !important;
+            }
+            .foot-link a {
+                text-decoration: none;
+                font-size: 1.1rem;
+                color: rgb(192, 192, 192);
+                transition: all 0.3s ease-in-out;
+            }
+            .foot-link a:hover {
+                color: red;
+            }
+
+            #bala-first-head {
+                font-family: Sura; 
+                font-size: 3.6rem; 
+                color: rgb(223, 223, 0); 
+                letter-spacing: 0.5px; 
+                font-weight: bold;
+                margin: 0;
+                padding: 0;
+                text-shadow: 2px 2px 2px black;
+            }
+            .balawadhut-main {
+                background-color: rgba(165, 42, 42, 0.856);
+            }
+            .box-curve {
+                border-radius: 35px;
+                padding: 0.3rem 2rem;
+                box-shadow: 2px 2px 10px gray, -2px -2px 10px gray;
+                background-color: white;
+            }
+            #bala-sec-head {
+                margin: 0;
+                padding: 0;
+                color: white;
+                font-size: 1rem;
+                font-family: Poppins;
+                text-shadow: 1px 1px black;
+            }
+
+            .balawadhut-main-container {
+                background-color: rgb(235, 235, 235);
+            }
+            #sir-head {
+                font-size: 2.8rem;
+                font-weight: bold;
+                color: rgb(87, 0, 128);
+                letter-spacing: 0.8px;
+            }
+            #img-curve img{
+                border-radius: 35px;
+                margin-bottom: 0.5rem;
+                border: 2x solid black;
+                transition: all 0.3s ease-in-out;
+            }
+            #img-curve img:hover {
+                transform: scale(1.03);
+            }
+            #sir-name {
+                padding-top: 0.6rem;
+                padding-bottom: 0.3rem;
+            }
+            #sir-name span {
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: rgb(87, 0, 128);
+                font-family: poppins;
+            }
+            #profession :first-child {
+                font-size: 1.1rem;
+            }
+
+            @media (max-width: 485px) {
+                #img-curve img {
+                    width: 350px !important;
+                    height: 350px !important;
+                }
+                .box-curve {
+                    padding: 0 1.5rem;
+                }
+            }
+            @media (max-width: 425px) {
+                #img-curve img {
+                    width: 300px !important;
+                    height: 300px !important;
+                }
+            }
+            @media (max-width: 325px) {
+                #img-curve img {
+                    width: 250px !important;
+                    height: 250px !important;
+                }
+                .box-curve {
+                    padding: 0 0.7rem;
+                }
+            }
+            
+            .teacher-head {
+                color: white;
+                font-weight: bold;
+                font-family: Poppins;
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                text-align: center;
+                background-color: rgb(79 112 182);
+                display: inline-block;
+                padding: 1.5rem 3rem;
+                border-top-left-radius: 40px;
+                border-bottom-right-radius: 40px;
+                font-family: Martel;
+                letter-spacing: 0.5px;
+            }
+            .img-cur-img {
+                border-radius: 8px;
+                background-color: rgb(250, 250, 250);
+            }
+
+            .background-school {
+                position: relative;
+                overflow: hidden;
+            }
+            .background-school::before {
+                content: "";
+                inset: 0;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -5;
+                background: url('https://img.pikbest.com/backgrounds/20190418/vector-school-background-image_1809001.jpg!sw800');
+                background-size: cover;
+                background-position: center;
+                opacity: 0.6;
+            }
+            .shayari {
+                position: relative;
+                min-height: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+                font-size: 1.4rem;
+                text-align: center;
+                cursor: default;
+                transition: all 0.4s ease-in-out;
+            }
+            .shayari:hover {
+                transform: translateY(-20px);
+            }
+            .shayari::before {
+                content: "";
+                inset: 0;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -5;
+                background-color: yellow;
+                opacity: 0.8;
+                border-top-left-radius: 70px;
+                border-bottom-right-radius: 70px;
+            }
+            @media (max-width: 425px) {
+                .shayari {
+                    height: 180px !important;
+                }
+            }
+
+            .parent-head {
+                margin-bottom: 4rem;
+            }
+            .balawadhut-heading {
+                font-size: 3rem;
+                font-family: Poppins;
+                letter-spacing: 0.8px;
+                color: white;
+                text-shadow: 2px 2px 2px black;
+                margin: 0;
+                padding: 1.4rem 5rem;
+                border-top-left-radius: 50px;
+                border-bottom-right-radius: 50px;
+                background-color: rgb(79 112 182);
+            }
+            @media (max-width: 375px) {
+                .balawadhut-heading {
+                    padding: 1.4rem 3rem;
+                }
+            }
+            .resourse {
+                transition: all 0.2s ease-in-out;
+                font-weight: bold;
+                text-shadow: 1px 1px 2px gray;
+            }
+            .resourse:hover {
+                color: red;
+                cursor: pointer;
+            }
+
+            .contact-bg {
+                background-color: rgb(138, 112, 74);
+                padding: 2rem 0;
+            }
+
+            .main-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center;
+            }
+            .item {
+                width: 400px;
+            }
+            .item iframe {
+                box-shadow: 2px 2px 5px rgb(185, 185, 185), -2px -2px 5px rgb(185, 185, 185);
+            }
+        </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-2 border-bottom">
+        <div class="container-fluid position-relative">
+            <div class="d-flex flex-column m-auto m-lg-0 ms-lg-1 pt-1">
+                <a class="navbar-brand fs-4 p-0 m-0 name nav-head" href="#">ग्रामपंचायत मौजे वडगांव</a>
+                <a class="navbar-brand fs-6 p-0 m-0 ms-4 ms-sm-3" href="#">ता. हातकणंगले जि. कोल्हापूर</a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0 gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">मुखपृष्ठ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Gram-panchayat.html">ग्रामपंचायतीबद्दल</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#seva">सेवा</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="development.html">विकासकामे</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">योजना</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">नोटीस</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Village.html">गाव</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Gallary.html">गॅलरी</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="School.html">शाळा</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Contact.html">संपर्क</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid bg-secondary-subtle pb-3 pb-lg-0">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col">
+                    <img class="school-first-image" src="Vidya/Children.jpeg" alt="" width="100%" height="450px">
+                </div>
+                <div class="col d-flex flex-column justify-content-center">
+                    <div class="d-flex flex-column justify-content-center align-content-center mb-4 school-main-1 text-center pt-4 pt-lg-2">
+                        <span class="fs-6 school-info">सर्व शिक्षण मोफत आणि </span>
+                        <span class="fs-6 school-info">विद्यार्थ्यांचा सर्वांगीण विकास </span>
+                        <span class="fs-6 school-info mb-2">म्हणजेच आपली जिल्हा परिषदेची</span>
+                        <h5 id="marathi-school">मराठी शाळा</h5>
+                        <span id="village-proud" class="me-md-5 me-lg-1">गावाचा अभिमान.....</span>
+                    </div>
+                    <div class=" text-center">
+                        <h3 class="school-name">विदया मंदिर</h3>
+                        <h3 class="village-name">मौजे वडगाव</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-warning">
+        <div class="row row-cols-1 row-cols-lg-2 ">
+            <div class="col school-img bg-secondary">
+                <div class="row row-cols-1 row-cols-sm-2 justify-content-center py-5">
+                    <div class="col col-10 col-sm-5 m-auto m-lg-2 mb-3 mb-lg-0">
+                        <img  class="border border-3 border-dark-subtle" src="Vidya/WhatsApp Image 2026-06-11 at 9.25.19 AM (1).jpeg" alt="" width="100%" height="150px">
+                    </div>
+                    <div class="col col-10 col-sm-5 m-auto m-lg-2 mb-3 mb-lg-0">
+                         <img class="border border-3 border-dark-subtle" src="Vidya/WhatsApp Image 2026-06-11 at 9.25.19 AM (2).jpeg" alt="" width="100%" height="150px">
+                    </div>
+                    <div class="col col-10 col-sm-5 m-auto m-lg-2 mb-3 mb-lg-0">
+                         <img class="border border-3 border-dark-subtle" src="Vidya/WhatsApp Image 2026-06-11 at 9.25.19 AM (3).jpeg" alt="" width="100%" height="150px">
+                    </div>
+                    <div class="col col-10 col-sm-5 m-auto m-lg-2 mb-3 mb-lg-0">
+                         <img class="border border-3 border-dark-subtle" src="Vidya/WhatsApp Image 2026-06-11 at 9.25.19 AM (5).jpeg" alt="" width="100%" height="150px">
+                    </div>
+                    <div class="col col-10 col-sm-5 m-auto m-lg-2 mb-3 mb-lg-0">
+                         <img class="border border-3 border-dark-subtle" src="Vidya/WhatsApp Image 2026-06-11 at 9.25.19 AM (6).jpeg" alt="" width="100%" height="150px">
+                    </div>
+                    <div class="col col-10 col-sm-5 m-auto m-lg-2">
+                         <img class="border border-3 border-dark-subtle" src="Vidya/WhatsApp Image 2026-06-11 at 9.25.19 AM (4).jpeg" alt="" width="100%" height="150px">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-warning" style="height: 100%; min-width: 100%; display: flex; justify-content: center;align-items: center;">
+                    <div class="info-bg p-4 my-4 my-lg-0" style="width: 60%;">
+                        <span class="d-block text-white fs-4">तज्ज्ञ शिक्षक व प्रशिक्षित शिक्षक</span>
+                        <span class="d-block text-warning fs-4">शिष्यवृत्ती परीक्षा मार्गदर्शन व सराव</span>
+                        <span class="d-block text-white fs-4">प्रज्ञा शोध परीक्षा मार्गदर्शन व सराव</span>
+                        <span class="d-block text-warning fs-4">विद्यार्थ्यांच्या कलागुणांना वाव</span>
+                        <span class="d-block text-white fs-4">देण्यासाठी वार्षिक स्नेहसंमेलन</span>
+                        <span class="d-block text-warning fs-4">क्रीडा स्पर्धेत उत्कृष्ट कामगिरी</span>
+                        <span class="d-block text-white fs-4">विद्यार्थ्यांचा सर्वांगीण विकास हाच ध्यास</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid foot-contain bg-body-tertiary">
+        <div class="row row-cols-1 row-cols-md-2 ms-0 me-0">
+            <div class="col text-center align-content-center mb-5 mb-md-0">
+                <div>
+                    <img src="Vidya/WhatsApp Image 2026-06-11 at 9.25.19 AM.jpeg" alt="" width="250px" height="100px" style="border-radius: 10px; box-shadow: 1px 1px 5px gray;">
+                </div>
+            </div>
+            <div class="col" style="display: flex; align-items: center; justify-content: flex-end;">
+                <div style="width: 70%;" class="bg-white last-foot align-content-center round-content">
+                    <span class="fs-4 last-para">
+                        अध्यक्ष, उपाध्यक्ष व सर्व सदस्य, शाळा व्यवस्थापन समिती. मुख्याध्यापक व शिक्षक स्टाफ, विद्यामंदिर मौजे वडगांव.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid contact-bg">
+        <div class="container ">
+            <div class="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center text-center">
+                <div class="col fs-3 text-white text-center mb-3 mb-sm-3 mb-md-0" >
+                    <span style="background-color: brown; border-radius: 10px; padding: 0.2rem 1.2rem;">संपर्क</span>
+                </div>
+                <div class="col fs-4 mb-3 mb-sm-3 mb-md-0 text-white">8421216231</div>
+                <div class="col fs-4 mb-3 mb-sm-3 mb-md-0 text-white">9850490784</div>
+                <div class="col fs-4 mb-3 mb-sm-0 text-white">9049918670</div>
+                <div class="col fs-4  text-white">9050909064</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-2 bg-black">
+    </div>
+
+    <div class="container-fluid py-5 balawadhut-main">
+        <div class="row text-center justify-content-center gap-1">
+            <div class="col col-12 col-lg-3">
+                <div>
+                    <img style="border-radius: 25px; box-shadow: 2px 2px 5px white, -2px -2px 5px white;" src="Balawadhut/Baba.jpeg" alt="" width="180px" height="180px">
+                </div>
+            </div>
+            <div class="col col-12 col-lg-5 align-content-center my-4 my-lg-0 py-3 py-lg-1">
+                <h5 id="bala-sec-head">लोकसेवा शिक्षण संस्था मौजे वडगांव, संचलित</h5>
+                <h2 id="bala-first-head">बालावधूत हायस्कूल</h2>
+            </div>
+            <div class="col col-12 col-lg-3">
+                <div>
+                    <img style="border-radius: 25px; box-shadow: 2px 2px 5px white, -2px -2px 5px white;" src="Balawadhut/Annabhau.jpeg" alt="" width="180px" height="180px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 balawadhut-main-container">
+        <div class="container d-flex justify-content-center align-content-center">
+            <div class="box-curve d-flex flex-column justify-content-center align-content-center">
+                 <div class="text-center pb-3">
+                <h2 id="sir-head">संस्थापक</h2>
+                </div>
+            <div>
+                <div id="img-curve">
+                    <img style="border: 1px solid black;" src="Balawadhut/Chougule-sir.jpeg" alt="" width="420px" height="400px">
+                </div>
+                <div id="sir-name" class="text-center">
+                    <span>गुरुवर्य कै. सदाशिव चौगुले</span>
+                </div>
+                <div id="profession" class="text-center">
+                    <span class="d-block">स्वाभिमानी शिक्षक संघाचा</span>
+                    <span class="d-block">शिक्षकरत्न पुरस्कार प्राप्त</span>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+     <div class="container-fluid py-3">
+        <div class="container">
+            <div class="teacher d-flex justify-content-center">
+                <h3 class="teacher-head fs-2">शालेय शिक्षक, शिक्षिका व शिक्षकेत्तर कर्मचारी वर्ग</h3>
+            </div>
+            <div class="row text-center justify-content-center member-1">
+                <div
+                    class="img-cur-img col col-7 col-md-4 col-lg-2 d-flex justify-content-center flex-column border border-2 m-3 m-md-3 m-lg-4">
+                    <div>
+                        <img style="border-radius: 8px;margin-top: 0.5rem;" src="Balawadhut/Khandekar.jpeg" alt="" width="130px" height="130px">
+                    </div>
+                    <div style="margin-bottom: 0.4rem; margin-top: 0.5rem;">
+                        <span style="font-size: 1.2rem;">पी. बी. खांडेकर</span>
+                    </div>
+                </div>
+                <div
+                    class="img-cur-img col col-7 col-md-4 col-lg-2 d-flex justify-content-center flex-column border border-2 m-2 m-md-3 m-lg-4">
+                    <div>
+                        <img style="border-radius: 8px; margin-top: 0.5rem;" src="Balawadhut/Dhonge.jpeg" alt="" width="130px" height="130px">
+                    </div>
+                    <div style="margin-bottom: 0.4rem; margin-top: 0.6rem;">
+                        <span style="font-size: 1.2rem;">डी. एल. धोंगे</span>
+                    </div>
+                </div>
+                <div
+                    class="img-cur-img col col-7 col-md-4 col-lg-2 d-flex justify-content-center flex-column border border-2 m-2 m-md-3 m-lg-4">
+                    <div>
+                        <img style="border-radius: 8px;margin-top: 0.5rem;" src="Balawadhut/M-B-Patil.jpeg" alt="" width="130px" height="130px">
+                    </div>
+                    <div style="margin-bottom: 0.4rem; margin-top: 0.6rem;">
+                        <span style="font-size: 1.2rem; margin-top: 0.6rem;">एम. बी. पाटील</span>
+                    </div>
+                </div>
+                <div
+                    class="img-cur-img col col-7 col-md-4 col-lg-2 d-flex justify-content-center flex-column border border-2 m-2 m-md-3 m-lg-4">
+                    <div>
+                        <img style="border-radius: 8px;margin-top: 0.5rem;" src="Balawadhut/D-S-Patil.jpeg" alt="" width="130px" height="130px">
+                    </div>
+                    <div style="margin-bottom: 0.4rem; margin-top: 0.6rem;">
+                        <span style="font-size: 1.2rem;">डी. एस. पाटील </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center justify-content-center member-1">
+                <div
+                    class="img-cur-img col col-7 col-md-4 col-lg-2 d-flex justify-content-center flex-column border border-2 m-3 m-md-3 m-lg-4">
+                    <div>
+                        <img style="border-radius: 8px;margin-top: 0.5rem;" src="Balawadhut/Karande.jpeg" alt="" width="130px" height="130px">
+                    </div>
+                    <div style="margin-bottom: 0.4rem; margin-top: 0.6rem;">
+                        <span style="font-size: 1.2rem;">सौ. एस. आर. कारंडे</span>
+                    </div>
+                </div>
+                <div
+                    class="img-cur-img col col-7 col-md-4 col-lg-2 d-flex justify-content-center flex-column border border-2 m-2 m-md-3 m-lg-4">
+                    <div>
+                        <img style="border-radius: 8px;margin-top: 0.5rem;" src="Balawadhut/miss-patil.jpeg" alt="" width="130px" height="130px">
+                    </div>
+                    <div style="margin-bottom: 0.4rem; margin-top: 0.6rem;">
+                        <span style="font-size: 1.2rem;">सौ. ए. आर. पाटील</span>
+                    </div>
+                </div>
+                <div
+                    class="img-cur-img col col-7 col-md-4 col-lg-2 d-flex justify-content-center flex-column border border-2 m-2 m-md-3 m-lg-4">
+                    <div>
+                        <img style="border-radius: 8px;margin-top: 0.5rem;" src="Balawadhut/Karake.jpeg" alt="" width="130px" height="130px">
+                    </div>
+                    <div style="margin-bottom: 0.4rem; margin-top: 0.6rem;">
+                        <span style="font-size: 1.2rem;">सौ. व्ही. व्ही. करके</span>
+                    </div>
+                </div>
+                <div
+                    class="img-cur-img col col-7 col-md-4 col-lg-2 d-flex justify-content-center flex-column border border-2 m-2 m-md-3 m-lg-4">
+                    <div>
+                        <img style="border-radius: 8px;margin-top: 0.5rem;" src="Balawadhut/Jamadar.jpeg" alt="" width="130px" height="130px">
+                    </div>
+                    <div style="margin-bottom: 0.4rem; margin-top: 0.6rem;">
+                        <span style="font-size: 1.2rem;">सौ. वाय. जे. जमादार </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center justify-content-center member-1">
+                <div
+                    class="img-cur-img col col-7 col-md-4 col-lg-2 d-flex justify-content-center flex-column border border-2 m-3 m-md-3 m-lg-4">
+                    <div>
+                        <img style="border-radius: 8px; margin-top: 0.5rem;" src="Balawadhut/Jadhav.jpeg" alt="" width="130px" height="130px">
+                    </div>
+                    <div style="margin-bottom: 0.4rem; margin-top: 0.6rem;">
+                        <span style="font-size: 1.2rem;">एस. जी. जाधव</span>
+                    </div>
+                </div>
+                <div
+                    class="img-cur-img col col-7 col-md-4 col-lg-2 d-flex justify-content-center flex-column border border-2 m-2 m-md-3 m-lg-4">
+                    <div>
+                        <img style="border-radius: 8px; margin-top: 0.5rem;" src="Balawadhut/Sutar.jpeg" alt="" width="130px" height="130px">
+                    </div>
+                    <div style="margin-bottom: 0.4rem; margin-top: 0.6rem;">
+                        <span style="font-size: 1.2rem;">एस. जी. सुतार शिपाई</span>
+                    </div>
+                </div>
+                <div
+                    class="img-cur-img col col-7 col-md-4 col-lg-2 d-flex justify-content-center flex-column border border-2 m-2 m-md-3 m-lg-4">
+                    <div>
+                        <img style="border-radius: 8px; margin-top: 0.5rem;" src="Balawadhut/Vadd.jpeg" alt="" width="130px" height="130px">
+                    </div>
+                    <div style="margin-bottom: 0.4rem; margin-top: 0.6rem;">
+                        <span style="font-size: 1.2rem;">ए. पी. वड्ड शिपाई</span>
+                    </div>
+                </div>
+                <div
+                    class="img-cur-img col col-7 col-md-4 col-lg-2 d-flex justify-content-center flex-column border border-2 m-2 m-md-3 m-lg-4">
+                    <div>
+                        <img style="border-radius: 8px; margin-top: 0.5rem;" src="Balawadhut/Satpute.jpeg" alt="" width="130px" height="130px">
+                    </div>
+                    <div style="margin-bottom: 0.4rem; margin-top: 0.6rem;">
+                        <span style="font-size: 1.2rem;">सुमन सातपुते </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>       
+
+     <div class="container-fluid py-5 background-school ">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-10 col-md-5 m-3 shayari">शिक्षण सर्वांना सारखेच मिळते पण विद्यार्थी गुणवंत होत नाहीत सर्व विद्यार्थ्यांना गुणवंत करणे... हेच आमचे ध्येय...</div>
+                <div class="col col-10 col-md-5 m-3 shayari">प्रत्येक विद्यार्थ्यामधील सुप्त गुणांना वाव देत यशस्वी आत्मविश्वासू आदर्श नागरिक घडवणे.. हेच आमचे ध्येय...</div>
+                <div class="col col-10 col-md-5 m-3 shayari">शिक्षणासोबतच संस्कार, शिस्त नैतिक मूल्यांची जोपासना करून गुणवंत विद्यार्थी घडवणे... हेच आमचे ध्येय...</div>
+                <div class="col col-10 col-md-5 m-3 shayari">विद्यार्थ्यांच्या सर्वांगीण विकासासाठी आधुनिक शिक्षण उत्तम संस्कार यांची सांगड घालणे... हेच आमचे ध्येय...</div>
+            </div>
+        </div>
+     </div>
+
+     <div class="container-fluid py-5">
+        <div class="main-container">
+            <div class="item" id="box-1">
+                <iframe height="300px" width="100%" src="https://www.youtube.com/embed/7QAkzVwrIWw?si=97D0anJUbxDCihdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="item" id="box-2">
+                <iframe  height="300px" width="100%" src="https://www.youtube.com/embed/D_05eFSJ1n8?si=ji2PYJioNccaODiG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="item" id="box-3">
+                <iframe  height="300px" width="100%" src="https://www.youtube.com/embed/ijVzlBZKr-s?si=lX_LvzToA29UHl2X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="item" id="box-4">
+                <iframe height="300px" width="100%" src="https://www.youtube.com/embed/ozMn-_SoZPM?si=ZU17mEOlkyNtrL2v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="item" id="box-5">
+                <iframe height="300px" width="100%" src="https://www.youtube.com/embed/GhpUlGPpvLQ?si=WmB8jSBXaDGH3PPK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="item" id="box-6">
+                <iframe height="300px" width="100%" src="https://www.youtube.com/embed/IwAqYLI4lhQ?si=DF5MwtDHdFMbuxmn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+     </div>
+
+     <div class="container-fluid py-5 foot-img bg-body-secondary">
+        <div class="container">
+            <div class="d-flex justify-content-center parent-head">
+                <h1 class="d-inline-block balawadhut-heading">सुविधा :-</h1>
+            </div>
+            <div class="text-center fs-3 resourse">भरपूर शैक्षणिक साधने स्वतंत्र संगणक कक्ष, सुंदर, स्वच्छ, निसर्गरम्य परिसर</div><hr>
+            <div class="text-center fs-3 resourse">भव्य इमारत अत्याधुनिक सीसीटीव्ही नियंत्रक कॅमेरे</div><hr>
+            <div class="text-center fs-3 resourse">भव्य व प्रशस्त क्रीडांगण समृध्द ग्रंथालय व अटल रोबोटेक लॅब</div><hr>
+            <div class="text-center fs-3 resourse">इ. १० वीसाठी मानसशास्त्रीय कसोटया</div>
+        </div>
+     </div>
+
+    <div class="container-fluid py-5 footer">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+            <div class="col text-center text-sm-start text-md-center style="font-family: Poppins; font-size: 0.9rem" align-content-center">
+                <div>
+                    <h1 style="font-size: 2rem; font-family: Eczar;">ग्रामपंचायत मौजे वडगांव</h1>
+                </div>
+                <div class="mb-4 mb-md-0">
+                    <h2 style="font-size: 1.6rem;">ता. हातकणंगले जि. कोल्हापूर</h2>
+                </div>
+            </div>
+            <div class="col foot-link">
+                <div class="fs-4">महत्वाची संकेतस्थळे</div>
+                <div><a href="#">🔗महाराष्ट्र शासन</a></div>
+                <div><a href="#">🔗माझी ग्रामपंचायत</a></div>
+                <div><a href="#">🔗ग्रामविकास विभाग</a></div>
+                <div><a href="#">🔗ई-ग्रामस्वराज</a></div>
+                <div><a href="#">🔗शासन निर्णय</a></div>
+                <div  class="mb-4 mb-md-0"><a href="#">🔗MGNREGA</a></div>
+            </div>
+            <div class="col foot-link">
+                <div class="fs-4">लिंक्स</div>
+                <div><a href="#">🔗मुखपृष्ठ</a></div>
+                <div><a href="#">🔗विकासकामे</a></div>
+                <div><a href="#">🔗योजना</a></div>
+                <div><a href="#">🔗माझे गाव</a></div>
+                <div><a href="#">🔗गॅलरी</a></div>
+                <div  class="mb-4 mb-sm-0"><a href="#">🔗संपर्क</a></div>
+            </div>
+            <div class="col">
+                <div class="fs-4">संपर्क</div>
+                <div class="mb-2" style="font-family: Poppins; font-size: 0.9rem">ग्रामपंचायत कार्यालय, मौजे वडगांव, ता. हातकणंगले, जि. कोल्हापूर 416122</div>
+                <div style="font-family: Poppins; font-size: 0.9rem">संपर्क क्र.: 9665259715</div>
+            </div>
+            </div>
+            <hr>
+            <div class="text-center pt-3">
+                <div class="mb-2">
+                    <h5> <span class="text-primary">&copy; Copyright</span> ग्रामपंचायत मौजे वडगांव | All Rights Reserved
+                    </h5>
+                </div>
+                <div><h6>Designed by <span class="text-warning pe-1">Piyush Lohar</span><a href="https://github.com/piyushlohar2008-byte" target="_blank"><i class="text-white fa-brands fa-github"></i></a></h6></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
