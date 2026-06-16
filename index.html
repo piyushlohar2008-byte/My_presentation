@@ -23,6 +23,7 @@
             margin: 0;
             scroll-behavior: smooth;
         }
+        /* header */
         @media (max-width: 991px) {
             .navbar-nav {
                 padding-top: 0.7rem;
@@ -30,6 +31,7 @@
         }
         .coustom-link {
                 position: relative;
+                display: inline-block;
             }
             .coustom-link::after {
                 content: "";
@@ -38,7 +40,7 @@
                 height: 1.8px;
                 background-color: red;
                 left: 50%;
-                top: 38px;
+                top: 36px;
                 transform: translateX(-50%);
                 transition: all 0.4s ease;
             }
@@ -59,7 +61,7 @@
             text-shadow: 1px 1px black;
         }
         .nav-link {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             transition: all 0.2s ease;
             font-weight: bold;
             color: rgb(117, 117, 117) !important;
@@ -74,10 +76,10 @@
             width: 20px;
             height: 20px;
         }
+        /* header */
 
-        .size {
-            font-size: 1.1rem;
-        }
+
+        /* Web content slider */
         #animate {
             animation-name: color-changing;
             animation-timing-function: ease;
@@ -95,52 +97,50 @@
                 color: red;
             }
         }
-        
         .notification-content .label {
             font-weight: 600;
             color: #0d6efd;
             white-space: nowrap;
             font-size: 1.2rem;
         }
-
         .web-slider {
             border-top: 2px solid black !important;
             border-bottom: 2px solid black !important;
         }
-
+        /* Web content slider */
+        
+        
+        /* Village first information entry point */
         .mid-container {
             background-color: #f2f4f6;
         }
-
         .hero-head {
             font-weight: 600;
             font-family: Eczar;
         }
-
         .hero-sub-head {
             font-family: Poppins, serif;
         }
-
         .mid-paragraph {
             font-family: Poppins, serif;
             letter-spacing: 1px;
         }
-
         .mid-list {
             font-family: Poppins, serif;
         }
-
         #para {
             font-family: Poppins, serif;
             font-weight: 500;
             text-align: justify;
         }
+        /* Village first information entry point */
 
+
+        /* Village second information entry point */
         .village-info {
             background-color: #f8f9fa;
             padding-bottom: 4rem;
         }
-
         #village-info-head {
             padding-top: 1rem;
             margin-bottom: 2.8rem;
@@ -150,19 +150,20 @@
             color: darkred;
             font-weight: 600;
         }
-
         .col-effect {
             transition: all 0.3s ease-in-out;
-            border-radius: 20px;
+            border-radius: 10px;
             border: 0.5px solid rgb(41, 41, 41);
         }
-
         .col-effect:hover {
             transform: translateY(-15px);
             cursor: default;
             box-shadow: 2px 2px 8px rgb(182, 182, 182), -2px -2px 8px rgb(180, 180, 180);
         }
+        /* Village second information entry point */
 
+
+        /* #seva section */
         #help-head {
             padding-top: 1rem;
             margin-bottom: 2.8rem;
@@ -176,49 +177,43 @@
             padding: 0;
             padding-bottom: 0.4rem;
         }
-
         #help-head-2 {
             text-align: center;
             font-size: 1rem;
             font-family: poppins;
             font-weight: normal;
         }
-
         .help-col-head {
             font-size: 1.2rem;
             font-family: Poppins;
             color: darkred;
             font-weight: 600;
         }
-
         #help-para {
             font-size: 1.1rem;
             text-align: justify;
         }
-
         .help-effect {
             border: 1.5px solid black;
         }
-
         .help-effect:hover {
             border: 1.5px solid red;
             cursor: default;
         }
+        /* #seva section */
+
 
         .working-container {
             padding: 3rem 0rem;
             background-color: #f8f9fa;
         }
-
         .working-container .col {
             transition: all 0.3s ease-in-out;
         }
-
         .working-container .col:hover {
             box-shadow: 2px 2px 10px rgb(160, 160, 160), -2px -2px 10px rgb(160, 160, 160);
             cursor: default;
         }
-
         .work-head {
             text-align: center;
             font-family: Hind;
@@ -227,7 +222,6 @@
             font-weight: 600;
             margin-bottom: 1.8rem;
         }
-
         .work-main img {
             border-radius: 50%;
         }
@@ -282,6 +276,7 @@
             }
         }
 
+        /* footer */
         .footer {
             background-color: #3b4654;
             color: white !important;
@@ -295,14 +290,22 @@
         .foot-link a:hover {
             color: red;
         }
+        .img img {
+            border-radius: 5px;
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            .img img {
+                transform: rotate(270deg);
+            }
+        }
+        /* footer */
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-2 border-bottom">
+    <nav class="navbar navbar-expand-lg bg-white sticky-top border-2 border-bottom">
         <div class="container-fluid position-relative">
-            <div class="d-flex flex-column m-auto m-lg-0 ms-lg-1 pt-1">
-                <a class="navbar-brand fs-4 p-0 m-0 name nav-head" href="#">ग्रामपंचायत मौजे वडगांव</a>
-                <a class="navbar-brand fs-6 p-0 m-0 ms-4 ms-sm-3" href="#">ता. हातकणंगले जि. कोल्हापूर</a>
+            <div class="ms-2 ms-lg-0">
+                <img src="Project-image/Vadgaon-logo.jpeg" alt="" height="70px" width="240px">
             </div>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -349,9 +352,9 @@
     </nav>
 
     <div class="container-fluid bg-dark-subtle py-2 web-slider">
-        <div class="notification-content d-flex">
-            <span class="label pe-2">सूचना : </span>
-            <marquee class="fs-5 size" behavior="scroll" direction="left" scrollamount="6">
+        <div class="notification-content d-flex align-content-center">
+            <span class="label fs-6 pe-2">सूचना : </span>
+            <marquee class="fs-6 size" behavior="scroll" direction="left" scrollamount="6">
                 <span id="animate" style=" font-family: Yatra One, system-ui; padding-right: 0.2rem;"><sup>new</sup></span> नागरिकांचा सहभाग म्हणजे गावाचा विकास • पारदर्शक प्रशासन हीच खरी लोकसेवा • स्वच्छ गाव, समृद्ध गाव हेच
                 आपले ध्येय आहे
             </marquee>
@@ -391,8 +394,8 @@
 
     <div class="container-fluid mid-container py-5">
         <div class="container">
-            <span class="d-block fs-3 text-danger hero-head mb-1">ग्रामपंचायत मौजे वडगांव</span>
-            <span class="d-block hero-sub-head mb-3">ता. हातकणंगले जि. कोल्हापूर</span>
+            <span class="d-block fs-3 text-danger hero-head mb-0">ग्रामपंचायत मौजे वडगांव</span>
+            <span class="d-block hero-sub-head mb-3 ms-1 ms-sm-4">ता. हातकणंगले जि. कोल्हापूर</span>
             <p id="para" class="mb-5">या संकेतस्थळावर आपले मनःपूर्वक स्वागत आहे. नागरिकांना ग्रामपंचायतीच्या योजना, सेवा
                 व उपक्रमांची अचूक आणि पारदर्शक माहिती एका ठिकाणी उपलब्ध करून देणे हा या संकेतस्थळाचा मुख्य उद्देश आहे.
             </p>
@@ -405,7 +408,7 @@
                         <li class="mb-2 mb-md-0">पारदर्शक, जबाबदार व लोकाभिमुख प्रशासन</li>
                     </ul>
                 </div>
-                <div class="col mid-paragraph">
+                <div class="col mid-paragraph" style="text-align: justify;">
                     <p>ग्रामविकासासाठी नागरिकांचा सहभाग अत्यंत महत्त्वाचा आहे. स्वच्छता, पाणीपुरवठा, रस्ते, शिक्षण,
                         आरोग्य व डिजिटल सेवा यामध्ये सातत्याने सुधारणा करणे हे ग्रामपंचायतीचे ध्येय आहे.</p>
                 </div>
@@ -417,13 +420,13 @@
         <div class="container">
             <h1 id="village-info-head">गावाची माहिती</h1>
             <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 gap-4 justify-content-center">
-                <div class="col d-flex flex-column text-center bg-white py-4 px-5 col-effect">
+                <div class="col col-11  d-flex flex-column text-center bg-white py-4 px-5 col-effect">
                     <div><span style="font-size: 3rem; margin-bottom: 0.5rem; ">📐</span></div>
-                    <div><span style="margin-bottom: 0.5rem; font-size: 1.2rem;">एकूण क्षेत्रफळ</span></div>
+                    <div><span style="margin-bottom: 0.6rem; font-size: 1.2rem;">एकूण क्षेत्रफळ</span></div>
                     <div><span style="font-family: Poppins; padding-bottom: 0.3rem; font-size: 1.2rem;">883.00 चौ.
                             कि.मी.</span></div>
                 </div>
-                <div class="col d-flex flex-column text-center bg-white py-4 px-5 col-effect">
+                <div class="col col-11 d-flex flex-column text-center bg-white py-4 px-5 col-effect">
                     <div><span><i style="font-size: 3rem; margin-top: 1rem; margin-bottom: 0.4rem; "
                                 class="fa-solid fa-person"></i></span></div>
                     <div><span style="font-size: 1.2rem;">लोकसंख्या</span></div>
@@ -431,7 +434,7 @@
                     <div><span style="font-family: Poppins; margin-bottom: 0.5rem; font-size: 1.2rem;">(पुरुष - 3144,
                             महिला - 3053)</span></div>
                 </div>
-                <div class="col d-flex flex-column text-center bg-white py-4 px-5 col-effect">
+                <div class="col col-11 d-flex flex-column text-center bg-white py-4 px-5 col-effect">
                     <div><span style="font-size: 3rem;">🏷️</span></div>
                     <div><span style="font-size: 1.2rem; font-family: Poppins; padding-bottom: 0.5rem;">LGD कोड</span>
                     </div>
@@ -661,11 +664,8 @@
                     <div>
                         <img src="Project-image/sawant.jpeg" alt="" width="130px" height="130px">
                     </div>
-                    <div>
+                    <div class="mb-4">
                         <span style="font-size: 1.2rem;">श्री. ज्ञानेश्वर सावंत </span>
-                    </div>
-                    <div style="padding-bottom: 0.5rem;">
-                        
                     </div>
                 </div>
             </div>
@@ -722,35 +722,31 @@
         </div>
     </div>
 
-    <div class="container-fluid py-5 footer">
+    <div class="container-fluid py-4 footer">
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-                <div class="col text-center text-sm-start text-md-center style=" font-family: Poppins; font-size:
-                    0.9rem" align-content-center">
-                    <div>
-                        <h1 style="font-size: 2rem; font-family: Eczar;">ग्रामपंचायत मौजे वडगांव</h1>
-                    </div>
-                    <div class="mb-4 mb-md-0">
-                        <h2 style="font-size: 1.6rem;">ता. हातकणंगले जि. कोल्हापूर</h2>
+                <div class="col align-content-center mb-4 mb-sm-0 text-center text-sm-start">
+                    <div class="img me-0 me-md-3 me-lg-0">
+                        <img src="Project-image/Vadgaon-logo.jpeg" alt="" height="70px" width="220px">
                     </div>
                 </div>
                 <div class="col foot-link">
                     <div class="fs-4">महत्वाची संकेतस्थळे</div>
-                    <div><a href="#">🔗महाराष्ट्र शासन</a></div>
-                    <div><a href="#">🔗माझी ग्रामपंचायत</a></div>
-                    <div><a href="#">🔗ग्रामविकास विभाग</a></div>
-                    <div><a href="#">🔗ई-ग्रामस्वराज</a></div>
-                    <div><a href="#">🔗शासन निर्णय</a></div>
-                    <div class="mb-4 mb-md-0"><a href="#">🔗MGNREGA</a></div>
+                    <div><a href="https://maharashtra.gov.in/" target="_blank">🔗महाराष्ट्र शासन</a></div>
+                    <div><a href="https://majhigrampanchayat.com/" target="_blank">🔗माझी ग्रामपंचायत</a></div>
+                    <div><a href="https://rdd.maharashtra.gov.in/en/" target="_blank">🔗ग्रामविकास विभाग</a></div>
+                    <div><a href="https://egramswaraj.gov.in/" target="_blank">🔗ई-ग्रामस्वराज</a></div>
+                    <div><a href="https://gr.maharashtra.gov.in/1125/%e0%a4%ae%e0%a5%81%e0%a4%96%e0%a5%8d%e0%a4%af-%e0%a4%aa%e0%a5%83%e0%a4%b7%e0%a5%8d%e0%a4%a0" target="_blank">🔗शासन निर्णय</a></div>
+                    <div class="mb-4 mb-md-0"><a href="https://nrega.dord.gov.in/" target="_blank">🔗MGNREGA</a></div>
                 </div>
                 <div class="col foot-link">
                     <div class="fs-4">लिंक्स</div>
-                    <div><a href="#">🔗मुखपृष्ठ</a></div>
-                    <div><a href="#">🔗विकासकामे</a></div>
+                    <div><a href="index.html">🔗मुखपृष्ठ</a></div>
+                    <div><a href="development.html">🔗विकासकामे</a></div>
                     <div><a href="#">🔗योजना</a></div>
-                    <div><a href="#">🔗माझे गाव</a></div>
-                    <div><a href="#">🔗गॅलरी</a></div>
-                    <div class="mb-4 mb-sm-0"><a href="#">🔗संपर्क</a></div>
+                    <div><a href="Village.html">🔗माझे गाव</a></div>
+                    <div><a href="Gallary.html">🔗गॅलरी</a></div>
+                    <div class="mb-4 mb-sm-0"><a href="Contact.html">🔗संपर्क</a></div>
                 </div>
                 <div class="col">
                     <div class="fs-4">संपर्क</div>
@@ -762,11 +758,11 @@
             <hr>
             <div class="text-center pt-3">
                 <div class="mb-2">
-                    <h5> <span class="text-primary">&copy; Copyright</span> ग्रामपंचायत मौजे वडगांव | All Rights Reserved
+                    <h5 class="fs-6"> <span class="text-primary">Copyright &copy;</span> <span style="font-family: Poppins;" class="fs-6">ग्रामपंचायत मौजे वडगांव</span> | All Rights Reserved
                     </h5>
                 </div>
                 <div>
-                    <h6>Designed by <span class="text-warning pe-1">Piyush Lohar</span><a href="https://github.com/piyushlohar2008-byte" target="_blank"><i class="text-white fa-brands fa-github"></i></a> </h6>
+                    <h6 class="fs-6">Designed by <a href="https://piyushlohar2008-byte.github.io./Micro-projects/" target="_blank" class="text-decoration-none"><span class="text-warning">Piyush Lohar</span></a> <a href="https://github.com/piyushlohar2008-byte" target="_blank"><i class="text-white fa-brands fa-github"></i></a> </h6>
                 </div>
             </div>
         </div>
